@@ -1,0 +1,1 @@
+# member-vera-rock-paper-scissors
