@@ -8,13 +8,19 @@ function getComputerChoice() {
     const theChoice = options[Math.floor(Math.random() * 3)];
     return theChoice;
 }
-console.log(getComputerChoice());
 
 function playRound(playerSelection, computerSelection) {
 
 }
-function checkWinner(playerSelection, computerSelection){
-    if(playerSelection == computerSelection) {
+function checkWinner(playerSelection, computerSelection) {
+    if (playerSelection == computerSelection) {
         return "TIE";
     }
+    else if (
+        (playerSelection == "rock" && computerSelection == "scissors") ||
+        (playerSelection == "scissors" && computerSelection == "paper") ||
+        (playerSelection == "paper" && computerSelection == "rock")
+    ) { return "Player WINS!"
+    }
 }
+console.log(getComputerChoice());
