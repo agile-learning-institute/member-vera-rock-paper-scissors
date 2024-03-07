@@ -1,16 +1,16 @@
-console.log("game"); //to see if it is working//
-
 const options = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
-    console.log("computer-game"); //to see if it is working//
-
     const theChoice = options[Math.floor(Math.random() * 3)];
     return theChoice;
 }
 
-function playRound(playerSelection, computerSelection) {
-
+function playRound() {
+    const computerSelection = getComputerChoice();
+    const humanSelection = prompt("Enter Your Selection").toLocaleLowerCase();
+    const theWinner = checkWinner(computerSelection, humanSelection);
+    console.log("Computer Selected", computerSelection, "Human Selection", humanSelection, "The winner is", theWinner);
+     
 }
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
@@ -25,13 +25,12 @@ function checkWinner(playerSelection, computerSelection) {
     }
     return "Computer WINS!";
 }
-console.log(checkWinner("rock", "rock"));
-console.log(checkWinner("rock", "paper"));
-console.log(checkWinner("rock", "scissors"));
-console.log(checkWinner("paper", "rock"));
-console.log(checkWinner("paper", "paper"));
-console.log(checkWinner("paper", "scissors"));
-console.log(checkWinner("scissors", "rock"));
-console.log(checkWinner("scissors", "paper"));
-console.log(checkWinner("scissors", "scissors"));
-console.log(getComputerChoice());
+function playGame() {
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+}
+
+playGame();
