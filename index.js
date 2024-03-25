@@ -25,12 +25,5 @@ function checkWinner(playerSelection, computerSelection) {
     }
     return "Computer WINS!";
 }
-function playGame() {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-}
 
 playGame();
