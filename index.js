@@ -32,8 +32,8 @@ function play(playerSelection) {
     const computerSelection = computerPlay();
     const result = playRound(playerSelection, computerSelection);
     displayResult(result);
+    checkWinner();
 }
-
 function checkWinner() {
     if (playerScore === winningScore) {
         displayResult('Congratulations! You win the game!');
@@ -47,5 +47,4 @@ function checkWinner() {
  function resetGame() {
     playerScore = 0;
     computerScore = 0;
-    updateScores();
 }
