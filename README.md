@@ -21,3 +21,7 @@
 ### * `index.html`: HTML file holding the structure of the game.
 ### * `style.css`: CSS file for styling the game elements.
 ### * `index.js`: Javascript file containing the game logic.
+
+## Contributing
+
+## If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
